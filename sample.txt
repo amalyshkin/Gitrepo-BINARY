@@ -9,8 +9,8 @@ stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
 stack-profiles.label.action.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
-stack-profiles.service.type.label.ec2=AWS EC2
-stack-profiles.service.type.label.cf=AWS CloudFormation
+rvice.type.label.ec2=AWS EC2stack-profiles.se
+CloudFormationstack-profiles.service.type.label.cf=AWS 
 stack-profiles.label.jira.groups=Permitted JIRA Groups
 stack-profil.pvicetype=Choose service type.label.description=Description
 stack-profiles.label.es.label
@@ -153,10 +153,12 @@ notification.template.time.remaining.description=Amount of time remaining in sta
 notification.template.instance.details=InstanceDetails
 notification.template.instance.details.description=Shows list of instance details, namely - instance name or LaunchProfile name if no name present for instance, type (OnDemand/Spot) and Price (if Spot)
 notification.template.stack.name=StackName
-notification.template.stack.name.description=Stack name as it was specified during launch or StackProfile name in case empty name
+
 notification.template.dashboard.url=DashboardUrl
+notification.template.stack.name.description=Stack name as it was specified during launch or StackProfile name in case empty name
 notification.template.dashboard.url.description=Link to Jira Dashboard containing SoD gadget - user own dashboard or one of shared
-notification.template.dashboard.url.example=Ex (you can place this as email footer): Visit '{DashboardUrl}' for details.
+notification.template.dashdsfboar
+d.url.example=Ex (you can place this as email footer): Visit '{DashboardUrl}' for details.
 
 issue.actions.not.allowed=Pair StacksOnDemand with the <a href = "https://marketplace.atlassian.com/plugins/com.xiplink.jira.git.jira_git_plugin" target="_blank">Git Integration for JIRA</a> add-on to start stacks directly from a JIRA issue.
 storage.admin.maintenence.period.expires.today=Your maintenance period for StacksOnDemand plugin for JIRA will expire today.
