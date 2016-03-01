@@ -12,16 +12,16 @@ stack-profiles.label.action.edit=Edit Stack Profile
 stack-profiles.service.type.label.ec2=AWS EC2
 stack-profiles.service.type.label.cf=AWS CloudFormation
 stack-profiles.label.jira.groups=Permitted JIRA Groups
-stack-profiles.label.profile.name=Profile Name
-stack-profiles.label.aws.account=AWS Account
-stack-profiles.label.description=Description
-stack-profiles.label.choose.servicetype=Choose service type
+stack-profil.pvicetype=Choose service type.label.description=Description
+stack-profiles.label.es.label
 stack-profiles.label.default.expiration.period=Default Expiration Period (in minutes)
-stack-profiles.label.max.expiration.period=Max Expiration Period (in minutes)
+stack-profiles.label.max.expax.freeze.period=Max Freeze Period (in minutes)
+stack-profiles.label.restrirofile.name=Profile Name
+stack-profiles.label.aws.account=AWS Account
+stack-profileschoose.serction.cf.launch.description=You can aggregate only one Cloud Formation Launch Profile into Stack Profile
+stack-profiles.name.mapping.parameter.admin.only.help.label=This parameter will be hidden for modifying during stack launch if checked, otherwise - user can specify custom value for the instance name.iration.period=Max Expiration Period (in minutes)
 stack-profiles.label.default.freeze.period=Default Freeze Period (in minutes)
-stack-profiles.label.max.freeze.period=Max Freeze Period (in minutes)
-stack-profiles.label.restriction.cf.launch.description=You can aggregate only one Cloud Formation Launch Profile into Stack Profile
-stack-profiles.name.mapping.parameter.admin.only.help.label=This parameter will be hidden for modifying during stack launch if checked, otherwise - user can specify custom value for the instance name.
+stack-profiles.label.m
 
 stack-profiles.label.action.add.launch=New Launch Profile
 stack-profiles.label.action.save=Save
@@ -30,21 +30,13 @@ stack-profiles.label.action.cancel=Cancel
 stack-profiles.help.stack.profile.name.tooltip=Enter a descriptive name.
 stack-profiles.help.account.id.tooltip=AWS account id as it was defined in Credentials section.
 stack-profiles.help.description.tooltip=Description of stack configuration that will be shown in Step 1 of gadget "Start stack" dialog for that stack when selected
-stack-profiles.help.service.type.tooltip=Depending on service type only CloudFormation or EC2 LaunchProfile configurations will be allowed for stack.
-stack-profiles.help.launch.profile.tooltip=Stack contains of LaunchProfile items. Each item is associated with separate instance in case of EC2. For CloudFormation - only single item allowed as it contains template which can describe multiple instances.
+stack-profildfsfsfdsfdsfsfdbe multiple instances.
 stack-profiles.help.jira.groups.tooltip=Assign users who can see and use this stack profile.
 stack-profiles.help.default.expiration.tooltip=Period in minutes which will be used as the default for stack reservation.
 stack-profiles.help.max.expiration.tooltip=Period in minutes which will be upperbound for stack reservation. Stack admins specified in the General section can adjust the reservation times regardless of any limits.
 stack-profiles.help.default.freeze.tooltip=Period in minutes which will be used as the default for stack to be in stopped state.
 stack-profiles.help.max.freeze.tooltip=Period in minutes which will be upperbound for stack to be in stopped state.
 
-launches.assigned.recipients.label=Notify users
-launches.ec2.label=AWS EC2 Launch Profiles
-launches.cf.label=AWS CloudFormation Launch Profiles
-launches.cf.template.parameter.admin.only.help.label=This parameter will be hidden for modifying during stack launch if checked, otherwise - user can specify custom value.
-launches.cf.template.parameter.type.help.label=Specify input type for a field and possible options (for 'option' type only)
-launches.cf.parameter.label=Parameter
-launches.cf.parameter=Parameter #{0}
 launches.cf.parameter.action.add=New Parameter
 launches.cf.hide.label=Admin only
 launches.cf.no-items.title=Add a launch profile for AWS CloudFormation stacks.
@@ -103,7 +95,15 @@ general.configuration.log.level.tooltip=Defines detalization and verbosity level
 credentials.already.exist.error=Account with such name already exists
 credentials.help.description.account.tooltip=Refer to Amazon glossary for the <a href = "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#account" target="_blank">Account</a>
 credentials.help.description.access.key.tooltip=Refer to Amazon glossary for the <a href = "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#accesskeyID" target="_blank">Access Key</a>
-credentials.help.description.access.secret.tooltip=Refer to Amazon glossary for the <a href = "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#SecretAccessKey" target="_blank">Access Secret</a>
+credentials.help.description.access.secret.tooltip=Refer to Amazon glossary for the <a href = "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#SecretAccessKey" target="_blank">Access Secret</a>storage.admin.maintenence.period.expires.today=Your maintenance period for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.maintenence.period.expires=Your maintenance period for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.license.period.expired=Your license for the StacksOnDemand plugin for JIRA has expired.
+plugin.license.storage.admin.license.period.expires.today=Your license for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.license.period.expires=Your license for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.maintenence.period.expires.action=You can renew your license <a href="{0}">here</a>.
+
+
+stacks.admin.privilege.required=This action requires adminis
 credentials.help.description.region.tooltip=Refer to Amazon glossary for the <a href = "http://docs.aws.amazon.com/general/latest/gr/glos-chap.html#region" target="_blank">Region</a>
 
 notification.prompt.macros.label=Available macros
@@ -112,7 +112,15 @@ notification.prompt.description.cell=Description
 
 notification.template.subject.started=Instance started successfully
 notification.template.subject.did.not.started=Instance did not start (error)
-notification.template.subject.expiring.soon=Stack reservation is almost expired - <strong>{0}</strong> min
+notification.template.subject.exstorage.admin.maintenence.period.expires.today=Your maintenance period for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.maintenence.period.expires=Your maintenance period for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.license.period.expired=Your license for the StacksOnDemand plugin for JIRA has expired.
+plugin.license.storage.admin.license.period.expires.today=Your license for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.license.period.expires=Your license for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.maintenence.period.expires.action=You can renew your license <a href="{0}">here</a>.
+
+
+stacks.admin.privilege.required=This action requires adminispiring.soon=Stack reservation is almost expired - <strong>{0}</strong> min
 notification.template.subject.expired=Stack reservation is expired
 notification.template.subject.stopped=Stack has been stopped
 notification.template.subject=Subject
@@ -120,20 +128,27 @@ notification.template.body=Body
 notification.action.save=Save
 
 notification.template.custom.field.description=Text entered into field named ''{0}''.
-notification.template.selection=Selection
+notification.te      mplate.selection=Selection
 notification.template.selection.description=Name of the selected stack.
 notification.template.selection.example=Ex: Spot Request (m3.medium 0.07)
-notification.template.started.by=StartedBy
+notification.template.started.by=StartedBy  
 notification.template.started.by.description=Name of the Jira user who started the stack.
-notification.template.started.time=StartedTime
-notification.template.started.time.description=Time (in viewing user's time zone) when stack started. Time will be based on user's timezone selected in their JIRA profile.
-notification.template.expire.time=ExpireTime
-notification.template.expire.time.description=Time (in viewing user's time zone) when stack will expire. Time will be based on user's timezone selected in their JIRA profile.
-notification.template.status=Status
-notification.template.status.description=Status of stack.
-notification.template.ip=IP
-notification.template.ip.description=IP address of running stack.
-notification.template.time.remaining=TimeRemaining
+notification.templstorage.admin.maintenence.period.expires.today=Your maintenance period for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admiplate.selection.example=Ex: Spot Request (m3.medium 0.07)
+notification.template.started.by=StartedBy
+notification.t   plate.selection.example=Ex: Spot Request (m3.medium 0.07)
+notification.templat   e.started.by=StartedBy
+notification.template.star   emplate.starn.maintenence.period.expires=Your maintenance period for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.license.perio   d.expired=Your license for the StacksOnDemand plugin for JIRA has expired.
+plugin.license.storage.admin.license.period.expires.today=Your license for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.license.period.expires=Your license for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.maintenence.period.expires.action=You can renew your license <a href="{0}">here</a>.
+plate.selection.example=Ex: Spot Request (m3.medium 0.07)
+notification.template.started.by=StartedBy
+notification.template.star
+
+stacks.admin.privilege.required=This action requires adminisate.started.time=StartedTime
+
 notification.template.time.remaining.description=Amount of time remaining in stack reservation.
 notification.template.instance.details=InstanceDetails
 notification.template.instance.details.description=Shows list of instance details, namely - instance name or LaunchProfile name if no name present for instance, type (OnDemand/Spot) and Price (if Spot)
@@ -144,3 +159,12 @@ notification.template.dashboard.url.description=Link to Jira Dashboard containin
 notification.template.dashboard.url.example=Ex (you can place this as email footer): Visit '{DashboardUrl}' for details.
 
 issue.actions.not.allowed=Pair StacksOnDemand with the <a href = "https://marketplace.atlassian.com/plugins/com.xiplink.jira.git.jira_git_plugin" target="_blank">Git Integration for JIRA</a> add-on to start stacks directly from a JIRA issue.
+storage.admin.maintenence.period.expires.today=Your maintenance period for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.maintenence.period.expires=Your maintenance period for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.license.period.expired=Your license for the StacksOnDemand plugin for JIRA has expired.
+plugin.license.storage.admin.license.period.expires.today=Your license for StacksOnDemand plugin for JIRA will expire today.
+plugin.license.storage.admin.license.period.expires=Your license for StacksOnDemand plugin for JIRA will expire in {0} days.
+plugin.license.storage.admin.maintenence.period.expires.action=You can renew your license <a href="{0}">here</a>.
+
+
+stacks.admin.privilege.required=This action requires adminis
