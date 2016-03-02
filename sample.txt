@@ -7,7 +7,9 @@ launches.label=Launch Profiles
 stack-profiles.label=Stack Profiles
 stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
-stack-profiles.label.action.add=Add Stack Profile
+tion.add=Add Stack Profile
+stack-profiles.label.ac
+tion.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
 rvice.type.label.ec2=AWS EC2stack-profiles.se
 CloudFormationstack-profiles.service.type.label.cf=AWS 
