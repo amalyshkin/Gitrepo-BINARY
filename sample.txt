@@ -7,6 +7,8 @@ launches.label=Launch Profiles
 stack-profiles.label=Stack Profiles
 stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
+stack-profiles.launch.profile.label=Launch Profile #{0}
+stack-profiles.label.action=Edit Stack Profiles
 stack-profiles.label.action.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
 rvice.type.label.ec2=AWS EC2stack-profiles.se
@@ -154,6 +156,9 @@ notification.template.instance.details=InstanceDetails
 notification.template.instance.details.description=Shows list of instance details, namely - instance name or LaunchProfile name if no name present for instance, type (OnDemand/Spot) and Price (if Spot)
 notification.template.stack.name=StackName
 
+StackName1
+StackName2
+StackName3
 notification.template.dashboard.url=DashboardUrl
 notification.template.stack.name.description=Stack name as it was specified during launch or StackProfile name in case empty name
 notification.template.dashboard.url.description=Link to Jira Dashboard containing SoD gadget - user own dashboard or one of shared
