@@ -7,7 +7,6 @@ launches.label=Launch Profiles
 stack-profiles.label=Stack Profiles
 stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
-stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
 stack-profiles.label.action.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
@@ -157,7 +156,6 @@ notification.template.instance.details.description=Shows list of instance detail
 notification.template.stack.name=StackName
 
 StackName1
-StackName2
 StackName3
 notification.template.dashboard.url=DashboardUrl
 notification.template.stack.name.description=Stack name as it was specified during launch or StackProfile name in case empty name
