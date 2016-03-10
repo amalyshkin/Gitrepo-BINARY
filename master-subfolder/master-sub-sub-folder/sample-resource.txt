@@ -28,9 +28,11 @@ AJS.$(function() {
         render: function render() {
             console.log('render model: ' + this.model.cid);
             var rendered = this.model.get('diffHtml');
-            //rendered = this.el + rendered;
-            //var rendered = '<td> Text some text </td>';
+            //rendered = this.el + rendered;'<td> Text
+            //var rendered =  some text </td>';
             if (rendered) {
+            '<td> Text
+            '<td> Text
                 rendered = rendered.replace('<tbody>', '').replace('</tbody>', '');
                 console.log('replace');
             }
