@@ -1,0 +1,59 @@
+AJS.$(function() {
+    'use strict';
+    var ns = bbb.gp.namespace('bbb.gp.codereview.diffExpander');
+
+    var GpView = bbb.gp.gpbackbone.GpView;
+
+    ns.DiffExpanderView = GpView.extend({
+        initialize: function initialize(options) {
+            console.log('new DiffExpanderView');
+            console.log(options);
+            this.model.on('change', this.render, this);
+            this.model.on('change', function() {console.log('model changed');}, this);
+            //this.render();
+        },
+        handleClick: function handleClick(e) {
+            console.log('handleClick');
+            e.preventDefault();
+            //this.model.fetch();
+            var that = this;
+            this.model.loadContext().then(function(result) {
+                    that.render();
+                }
+            );
+        },
+        events: {
+            'click' : 'handleClick',
+        },
+        render: function render() {
+            console.log('render model: ' + this.model.cid);
+            var rendered = this.model.get('diffHtml');
+            //rendered = this.el + rendered;
+            //var rendered = '<td> Text some text </td>';
+            if (rendered) {
+                rendered = rendered.replace('<tbody>', '').replace('</tbody>', '');
+                console.log('replace');
+            }
+            if (this.model.get('order') == 0) {
+                this.$el.after(AJS.$(rendered));
+            } else {
+                this.$el.before(AJS.$(rendered));
+            }
+            var next = this.model.get('next');
+            var expanderLineNumber = this.model.get('expanderLineNumber');
+            var lastExpander = next ? false : true;
+            var nextAStartNumber = next ? next.get('startANumber') : -1;
+            var nextEndBNumber = next ? next.get('endBNumber') : -1;
+            console.log(expanderLineNumber +  ' vs. ' + nextAStartNumber);
+            console.log(expanderLineNumber +  ' vs. ' + nextEndBNumber);
+            var shouldBeMergedWithNextDiff = expanderLineNumber == nextAStartNumber || expanderLineNumber == nextEndBNumber;
+            var isExpandedToEndOfFile = lastExpander && expanderLineNumber >= this.model.get('fileLinesCount');
+            var isExpandedToStartOfFile = expanderLineNumber == 0;
+            if (shouldBeMergedWithNextDiff || isExpandedToEndOfFile || isExpandedToStartOfFile) {
+                this.$el.hide();
+            }
+            //console.log(this.$el.find('.bbb-gp-diff_code-expander').length);
+            return this;
+        }
+    });
+});
