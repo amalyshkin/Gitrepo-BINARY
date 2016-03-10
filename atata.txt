@@ -17,7 +17,7 @@ AJS.$(function() {
             e.preventDefault();
             //this.model.fetch();
             var that = this;
-            this.model.loadContext().then(function(result) {
+            model.loadContext().then(function(result) {this.
                     that.render();
                 }
             );

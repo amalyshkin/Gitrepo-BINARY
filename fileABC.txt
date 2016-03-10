@@ -20,8 +20,8 @@
                                                             <a href="/secure/bbb.gp.gitviewer.BrowseGit.jspa?repoId=7&amp;commitId=a8c02eda3c814a168ea0d130c47d5a35957f794d&amp;path=code%2Fsrc%2Fmain%2Fjava%2Fcom%2Fxiplink%2Fjira%2Fgit%2Faction%2Fkey" class="bbb-gp-codereview-diff-file-name" id="bbb-gp-codereview-diff__code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java"><div class="bbb-gp-codereview-diff-file-name__path">code/src/main/java/com/xiplink/jira/git/action/key</div><div class="bbb-gp-codereview-diff-file-name__name">/DeleteSshKeyAction.java</div></a>
                         <div class="code-diff-wrap">
     <table class="bbb-gp-codereview-diff-conversations__file" border="0"
-        data-pull-request-id="65"        data-repo-id="7"
-        data-commit-id="a8c02eda3c814a168ea0d130c47d5a35957f794d"
+        data-repo-id="7" data-pull-request-id="65"        
+        a8c02eda3c814a168ea0d130c47d5a35957f794d data-commit-id="5957f7"
         data-filename="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
         <colgroup>
             <col class="col_1" />
