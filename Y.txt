@@ -1,0 +1,132 @@
+No config file path has been passed. Default will be used: cfg.properties
+2016-03-03 10:37:04 INFO  App:24 - Command type: ADD_TESTS
+2016-03-03 10:37:04 INFO  App:25 - Got credentials
+2016-03-03 10:37:04 INFO  RESTCyclesManager:119 - Reading .accpt token file..
+2016-03-03 10:37:04 INFO  RESTCyclesManager:160 - Seems like stored accpt token is expired
+2016-03-03 10:37:04 INFO  RESTCyclesManager:121 - Creating (rewriting) .accpt token file..
+2016-03-03 10:37:22 INFO  TokenInterceptor:67 - Logged in: yes
+2016-03-03 10:37:26 INFO  TokenInterceptor:81 - Temporary accpt token: a1f13eb11b4f7ef44ca82bbb69c7120b43d678fd364e316c45b407c77bb33cf52f2b09dfd957375b0c639055f6cf71e8611340d30a8ac7b1f9fa3d876d2d551a354bf8648b186a0e54a7c1fa048e81f2aa0ef504dc6610bd8448c61026646cf67f6d42d83587304988059f3161b36b2d052f938a0e532f956e54e3abdb9aa85f
+2016-03-03 10:37:28 INFO  RESTCyclesManager:51 - Cycle id: 0001454668718313-242ac112-0001
+2016-03-03 10:37:28 INFO  RESTCyclesManager:52 - version id: 12000
+2016-03-03 10:37:28 INFO  RESTCyclesManager:53 - tests: []
+2016-03-03 10:37:28 INFO  RESTCyclesManager:54 - projectId: 10400
+2016-03-03 10:37:28 INFO  RESTCyclesManager:55 - projectKey: VMI
+offset: 0
+4
+offset: 1
+	[VMI-1355]
+	[VMI-1808]
+	[VMI-1900]
+	[VMI-2065]
+	[VMI-1887]
+	[VMI-1316]
+	[VMI-1838]
+	[VMI-1882]
+	[VMI-1891]
+	[VMI-1892]
+offset: 2
+	[VMI-1893]
+	[VMI-3951]
+	[VMI-3935]
+	[VMI-4020]
+	[VMI-4434]
+	[VMI-2384]
+	[VMI-1943]
+	[VMI-1947]
+	[VMI-5275]
+	[VMI-5346]
+offset: 3
+	[VMI-2769]
+	[VMI-2331]
+	[VMI-2371]
+	[VMI-2782]
+	[VMI-2108]
+	[VMI-703]
+	[VMI-1810]
+	[VMI-704]
+	[VMI-1200]
+	[VMI-1207]
+offset: 4
+	[VMI-1462]
+	[VMI-2364]
+	[VMI-2281]
+	[VMI-2327]
+	[VMI-4335]
+	[VMI-4355]
+	[VMI-4302]
+	[VMI-5032]
+	[VMI-1354]
+	[VMI-2751]
+offset: 5
+	[VMI-2752]
+	[VMI-3347]
+	[VMI-2013]
+	[VMI-556]
+	[VMI-565]
+	[VMI-564]
+	[VMI-566]
+	[VMI-567]
+	[VMI-1419]
+offset: 0
+4
+offset: 1
+	[VMI-1355]
+	[VMI-1808]
+	[VMI-1900]
+	[VMI-2065]
+	[VMI-1887]
+	[VMI-1316]
+	[VMI-1838]
+	[VMI-1882]
+	[VMI-1891]
+	[VMI-1892]
+offset: 2
+	[VMI-1893]
+	[VMI-3951]
+	[VMI-3935]
+	[VMI-4020]
+	[VMI-4434]
+	[VMI-2384]
+	[VMI-1943]
+	[VMI-1947]
+	[VMI-5275]
+	[VMI-5346]
+offset: 3
+	[VMI-2769]
+	[VMI-2331]
+	[VMI-2371]
+	[VMI-2782]
+	[VMI-2108]
+	[VMI-703]
+	[VMI-1810]
+	[VMI-704]
+	[VMI-1200]
+	[VMI-1207]
+offset: 4
+	[VMI-1462]
+	[VMI-2364]
+	[VMI-2281]
+	[VMI-2327]
+	[VMI-4335]
+	[VMI-4355]
+	[VMI-4302]
+	[VMI-5032]
+	[VMI-1354]
+	[VMI-2751]
+offset: 5
+	[VMI-2752]
+	[VMI-3347]
+	[VMI-2013]
+	[VMI-556]
+	[VMI-565]
+	[VMI-564]
+	[VMI-566]
+	[VMI-567]
+	[VMI-1419]
+2016-03-03 10:37:38 INFO  AddTests:72 - Tests adding operation: success
+
+Summary of operation below:
+Already present: []
+Has not been added: []
+Has been added: []
+

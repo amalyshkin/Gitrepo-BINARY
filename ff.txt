@@ -1,0 +1,289 @@
+
+ * Creates a factory for SanitizedContent types.
+ *
+ * This is a hack so that the soydata.VERY_UNSAFE.ordainSanitized* can
+ * instantiate Sanitized* classes, without making the Sanitized* constructors
+ * publicly usable. Requiring all construction to use the VERY_UNSAFE names
+ * helps callers and their reviewers easily tell that creating SanitizedContent
+ * is not always safe and calls for careful review.
+ *
+ * @param {function(new: T, string)} ctor A constructor.
+ * @return {!function(*): T} A factory that takes content and returns a
+ *     new instance.
+ * @template T
+ * @private
+ */
+soydata.$$makeSanitizedContentFactory_ = function(ctor) {
+  /** @constructor */
+  function InstantiableCtor() {}
+  InstantiableCtor.prototype = ctor.prototype;
+  return function(content) {
+    var result = new InstantiableCtor();
+    result.content = String(content);
+    return result;
+  };
+};
+
+
+// -----------------------------------------------------------------------------
+// Sanitized content ordainers. Please use these with extreme caution (with the
+// exception of markUnsanitizedText). A good recommendation is to limit usage
+// of these to just a handful of files in your source tree where usages can be
+// carefully audited.
+
+
+/**
+ * Protects a string from being used in an noAutoescaped context.
+ *
+ * This is useful for content where there is significant risk of accidental
+ * unescaped usage in a Soy template. A great case is for user-controlled
+ * data that has historically been a source of vulernabilities.
+ *
+ * @param {*} content Text to protect.
+ * @return {!soydata.UnsanitizedText} A wrapper that is rejected by the
+ *     Soy noAutoescape print directive.
+ */
+soydata.markUnsanitizedText = function(content) {
+  return new soydata.UnsanitizedText(content);
+};
+
+
+/**
+ * Takes a leap of faith that the provided content is "safe" HTML.
+ *
+ * @param {*} content A string of HTML that can safely be embedded in
+ *     a PCDATA context in your app. If you would be surprised to find that an
+ *     HTML sanitizer produced {@code s} (e.g. it runs code or fetches bad URLs)
+ *     and you wouldn't write a template that produces {@code s} on security or
+ *     privacy grounds, then don't pass {@code s} here.
+ * @return {!soydata.SanitizedHtml} Sanitized content wrapper that
+ *     indicates to Soy not to escape when printed as HTML.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedHtml =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedHtml);
+
+
+/**
+ * Takes a leap of faith that the provided content is "safe" (non-attacker-
+ * controlled, XSS-free) Javascript.
+ *
+ * @param {*} content Javascript source that when evaluated does not
+ *     execute any attacker-controlled scripts.
+ * @return {!soydata.SanitizedJs} Sanitized content wrapper that indicates to
+ *     Soy not to escape when printed as Javascript source.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedJs =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedJs);
+
+
+// TODO: This function is probably necessary, either externally or internally
+// as an implementation detail. Generally, plain text will always work here,
+// as there's no harm to unescaping the string and then re-escaping when
+// finally printed.
+/**
+ * Takes a leap of faith that the provided content can be safely embedded in
+ * a Javascript string without re-esacping.
+ *
+ * @param {*} content Content that can be safely inserted as part of a
+ *     single- or double-quoted string without terminating the string.
+ * @return {!soydata.SanitizedJsStrChars} Sanitized content wrapper that
+ *     indicates to Soy not to escape when printed in a JS string.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedJsStrChars =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedJsStrChars);
+
+
+/**
+ * Takes a leap of faith that the provided content is "safe" to use as a URI
+ * in a Soy template.
+ *
+ * This creates a Soy SanitizedContent object which indicates to Soy there is
+ * no need to escape it when printed as a URI (e.g. in an href or src
+ * attribute), such as if it's already been encoded or  if it's a Javascript:
+ * URI.
+ *
+ * @param {*} content A chunk of URI that the caller knows is safe to
+ *     emit in a template.
+ * @return {!soydata.SanitizedUri} Sanitized content wrapper that indicates to
+ *     Soy not to escape or filter when printed in URI context.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedUri =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedUri);
+
+
+/**
+ * Takes a leap of faith that the provided content is "safe" to use as an
+ * HTML attribute.
+ *
+ * @param {*} content An attribute name and value, such as
+ *     {@code dir="ltr"}.
+ * @return {!soydata.SanitizedHtmlAttribute} Sanitized content wrapper that
+ *     indicates to Soy not to escape when printed as an HTML attribute.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedHtmlAttribute =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedHtmlAttribute);
+
+
+/**
+ * Takes a leap of faith that the provided content is "safe" to use as CSS
+ * in a style attribute or block.
+ *
+ * @param {*} content CSS, such as {@code color:#c3d9ff}.
+ * @return {!soydata.SanitizedCss} Sanitized CSS wrapper that indicates to
+ *     Soy there is no need to escape or filter when printed in CSS context.
+ */
+soydata.VERY_UNSAFE.ordainSanitizedCss =
+    soydata.$$makeSanitizedContentFactory_(soydata.SanitizedCss);
+
+
+// -----------------------------------------------------------------------------
+// Public utilities.
+
+
+/**
+ * Helper function to render a Soy template and then set the output string as
+ * the innerHTML of an element. It is recommended to use this helper function
+ * instead of directly setting innerHTML in your hand-written code, so that it
+ * will be easier to audit the code for cross-site scripting vulnerabilities.
+ *
+ * NOTE: New code should consider using goog.soy.renderElement instead.
+ *
+ * @param {Element} element The element whose content we are rendering.
+ * @param {Function} template The Soy template defining the element's content.
+ * @param {Object=} opt_templateData The data for the template.
+ * @param {Object=} opt_injectedData The injected data for the template.
+ */
+soy.renderElement = goog.soy.renderElement;
+
+
+/**
+ * Helper function to render a Soy template into a single node or a document
+ * fragment. If the rendered HTML string represents a single node, then that
+ * node is returned (note that this is *not* a fragment, despite them name of
+ * the method). Otherwise a document fragment is returned containing the
+ * rendered nodes.
+ *
+ * NOTE: New code should consider using goog.soy.renderAsFragment
+ * instead (note that the arguments are different).
+ *
+ * @param {Function} template The Soy template defining the element's content.
+ * @param {Object=} opt_templateData The data for the template.
+ * @param {Document=} opt_document The document used to create DOM nodes. If not
+ *     specified, global document object is used.
+ * @param {Object=} opt_injectedData The injected data for the template.
+ * @return {!Node} The resulting node or document fragment.
+ */
+soy.renderAsFragment = function(
+    template, opt_templateData, opt_document, opt_injectedData) {
+  return goog.soy.renderAsFragment(
+      template, opt_templateData, opt_injectedData,
+      new goog.dom.DomHelper(opt_document));
+};
+
+
+/**
+ * Helper function to render a Soy template into a single node. If the rendered
+ * HTML string represents a single node, then that node is returned. Otherwise,
+ * a DIV element is returned containing the rendered nodes.
+ *
+ * NOTE: New code should consider using goog.soy.renderAsElement
+ * instead (note that the arguments are different).
+ *
+ * @param {Function} template The Soy template defining the element's content.
+ * @param {Object=} opt_templateData The data for the template.
+ * @param {Document=} opt_document The document used to create DOM nodes. If not
+ *     specified, global document object is used.
+ * @param {Object=} opt_injectedData The injected data for the template.
+ * @return {!Element} Rendered template contents, wrapped in a parent DIV
+ *     element if necessary.
+ */
+soy.renderAsElement = function(
+    template, opt_templateData, opt_document, opt_injectedData) {
+  return goog.soy.renderAsElement(
+      template, opt_templateData, opt_injectedData,
+      new goog.dom.DomHelper(opt_document));
+};
+
+
+// -----------------------------------------------------------------------------
+// Below are private utilities to be used by Soy-generated code only.
+
+
+/**
+ * Builds an augmented map. The returned map will contain mappings from both
+ * the base map and the additional map. If the same key appears in both, then
+ * the value from the additional map will be visible, while the value from the
+ * base map will be hidden. The base map will be used, but not modified.
+ *
+ * @param {!Object} baseMap The original map to augment.
+ * @param {!Object} additionalMap A map containing the additional mappings.
+ * @return {!Object} An augmented map containing both the original and
+ *     additional mappings.
+ */
+soy.$$augmentMap = function(baseMap, additionalMap) {
+
+  // Create a new map whose '__proto__' field is set to baseMap.
+  /** @constructor */
+  function TempCtor() {}
+  TempCtor.prototype = baseMap;
+  var augmentedMap = new TempCtor();
+
+  // Add the additional mappings to the new map.
+  for (var key in additionalMap) {
+    augmentedMap[key] = additionalMap[key];
+  }
+
+  return augmentedMap;
+};
+
+
+/**
+ * Checks that the given map key is a string.
+ * @param {*} key Key to check.
+ * @return {string} The given key.
+ */
+soy.$$checkMapKey = function(key) {
+  if ((typeof key) != 'string') {
+    throw Error(
+        'Map literal\'s key expression must evaluate to string' +
+        ' (encountered type "' + (typeof key) + '").');
+  }
+  return key;
+};
+
+
+/**
+ * Gets the keys in a map as an array. There are no guarantees on the order.
+ * @param {Object} map The map to get the keys of.
+ * @return {Array.<string>} The array of keys in the given map.
+ */
+soy.$$getMapKeys = function(map) {
+  var mapKeys = [];
+  for (var key in map) {
+    mapKeys.push(key);
+  }
+  return mapKeys;
+};
+
+
+/**
+ * Gets a consistent unique id for the given delegate template name. Two calls
+ * to this function will return the same id if and only if the input names are
+ * the same.
+ *
+ * <p> Important: This function must always be called with a string constant.
+ *
+ * <p> If Closure Compiler is not being used, then this is just this identity
+ * function. If Closure Compiler is being used, then each call to this function
+ * will be replaced with a short string constant, which will be consistent per
+ * input name.
+ *
+ * @param {string} delTemplateName The delegate template name for which to get a
+ *     consistent unique id.
+ * @return {string} A unique id that is consistent per input name.
+ *
+ * @consistentIdGenerator
+ */
+soy.$$getDelTemplateId = function(delTemplateName) {
+  return delTemplateName;
+};
