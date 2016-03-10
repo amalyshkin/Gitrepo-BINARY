@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <meta name="decorator" content="none"/>
+    </head>
+    <body>
+        <div class="bbb-gp-codereview-diff__container">
+            <script>
+                (function() {
+                    var ns = bbb.gp.namespace("bbb.gp.codereview.diff");
+                    ns.projects = [{"id":10420,"key":"GITCL","name":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA Server"},{"id":10220,"key":"MGMT","name":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];
+                    ns.allowComments = false;
+                })();
+            </script>
+
+
+
+            
+            
+                                                                    
+                                                            <a href="/secure/bbb.gp.gitviewer.BrowseGit.jspa?repoId=7&amp;commitId=a8c02eda3c814a168ea0d130c47d5a35957f794d&amp;path=code%2Fsrc%2Fmain%2Fjava%2Fcom%2Fxiplink%2Fjira%2Fgit%2Faction%2Fkey" class="bbb-gp-codereview-diff-file-name" id="bbb-gp-codereview-diff__code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java"><div class="bbb-gp-codereview-diff-file-name__path">code/src/main/java/com/xiplink/jira/git/action/key</div><div class="bbb-gp-codereview-diff-file-name__name">/DeleteSshKeyAction.java</div></a>
+                        <div class="code-diff-wrap">
+    <table class="bbb-gp-codereview-diff-conversations__file" border="0"
+        data-pull-request-id="65"        data-repo-id="7"
+        data-commit-id="a8c02eda3c814a168ea0d130c47d5a35957f794d"
+        data-filename="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+        <colgroup>
+            <col class="col_1" />
+                            <col class="col_2" />
+                    </colgroup>
+                         
+                                                                                                                                                                                                            
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="4"
+            data-new-line-number="4">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="4"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="4"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_4_4" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_4_4"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.atlassian.upm.api.license.PluginLicenseManager;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="5"
+            data-new-line-number="5">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="5"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="5"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_5_5" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_5_5"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.xiplink.jira.git.BuildProperties;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="6"
+            data-new-line-number="6">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="6"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="6"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_6_6" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_6_6"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.xiplink.jira.git.GitPluginPermissionManager;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="7"
+            data-new-line-number="">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="7"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content=""></td>
+                                                                                        <td class="bbb-gp-diff_code-cell remove" data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_7_" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_7_"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: #fdd1d0; white-space: pre">import&nbsp;com.xiplink.jira.git.MultipleGitRepositoryManager;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="8"
+            data-new-line-number="7">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="8"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="7"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_8_7" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_8_7"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.xiplink.jira.git.action.GitActionSupport;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="9"
+            data-new-line-number="8">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="9"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="8"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_9_8" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_9_8"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.xiplink.jira.git.ao.model.SshKeyEntry;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number=""
+            data-new-line-number="9">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content=""></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="9"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell add" data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java__9" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java__9"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: #d4ebb6; white-space: pre">import&nbsp;com.xiplink.jira.git.gitmanager.MultipleGitRepositoryManager;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="10"
+            data-new-line-number="10">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="10"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="10"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_10_10" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_10_10"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">import&nbsp;com.xiplink.jira.git.ssh.KeyManager;&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="11"
+            data-new-line-number="11">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="11"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="11"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_11_11" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_11_11"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                                                        
+                                        <tr class="bbb-gp-diff_row">
+                                            <td class="bbb-gp-diff_cell0">
+                                                    <button class="bbb-gp-codereview-diff-conversations__add-comment  gp-reset "
+            data-old-line-number="12"
+            data-new-line-number="12">
+        <span class="octicon octicon-plus"></span>
+    </button>
+                                            </td>
+                                            <td class="bbb-gp-diff_cell1" data-content="12"></td>
+                                                                                            <td class="bbb-gp-diff_cell2" data-content="12"></td>
+                                                                                        <td class="bbb-gp-diff_code-cell " data-content="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java">
+                                                <a class="code-anchor" href="#code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_12_12" name="code/src/main/java/com/xiplink/jira/git/action/key/DeleteSshKeyAction.java_12_12"></a>
+                                                                                                                                                                                                                                                            <code class="language-java" style="background-color: inherit; white-space: pre">/**&nbsp;</code>
+                                                                                            </td>
+                                        </tr>
+                                                                                                                                                                                                                                         
+                        </table>
+    </div>
+                                    </div>
+    </body>
+</html>
