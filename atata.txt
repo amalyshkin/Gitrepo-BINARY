@@ -30,6 +30,9 @@ AJS.$(function() {
             var rendered = this.model.get('diffHtml');
             //rendered = this.el + rendered;
             //var rendered = '<td> Text some text </td>';
+    handleClick: function handleClick(e) {
+    console.log('handleClick');
+    e.preventDefault();
             if (rendered) {
                 rendered = rendered.replace('<tbody>', '').replace('</tbody>', '');
                 console.log('replace');
