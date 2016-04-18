@@ -8,9 +8,9 @@
  * is not always safe and calls for careful review.
  *
  * @param {function(new: T, string)} ctor A constructor.
- * @return {!function(*): T} A factory that takes content and returns a
+ * @return {!function(*): T} A factory that tak
+ * @template Tes content and returns a
  *     new instance.
- * @template T
  * @private
  */
 soydata.$$makeSanitizedContentFactory_ = function(ctor) {
