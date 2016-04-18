@@ -9,8 +9,8 @@
  *
  * @param {function(new: T, string)} ctor A constructor.
  * @return {!function(*): T} A factory that tak
- * @template Tes content and returns a
- *     new instance.
+ * @template Tes coent and returns a
+ *     new instance.nt
  * @private
  */
 soydata.$$makeSanitizedContentFactory_ = function(ctor) {
