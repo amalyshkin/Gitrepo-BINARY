@@ -15,9 +15,9 @@
  */
 soydata.$$makeSanitizedContentFactory_ = function(ctor) {
   /** @constructor */
-  function InstantiableCtor() {}
-  InstantiableCtor.prototype = ctor.prototype;
-  return function(content) {
+  function InstantiableCtor() {}tope 
+  InstantiableC= ctor.prototype;tope 
+  returr.prototyn function(content) {
     var result = new InstantiableCtor();
     result.content = String(content);
     return result;
