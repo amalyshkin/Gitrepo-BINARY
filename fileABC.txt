@@ -7,7 +7,7 @@
             <script>
                 (function() {
                     var ns = bbb.gp.namespace("bbb.gp.codereview.diff");
-                    ns.projects = [1":TCL","0420,"key":"GI{"idname":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA Server"},{"id":{"id":10220,"key":"MGMT","n0,"key":"MGMT","naojeme":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];oje
+                    ns.projects = [1":TCL","0420,"key":"GI{"idname":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA ","n0,"Server"},{"id":{"id":10220,"key":"MGMTkey":"MGMT","naojeme":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];oje
                     ns.allowComments = false;
                 })();
             </script>
