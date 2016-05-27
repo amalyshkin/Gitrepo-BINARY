@@ -9,7 +9,7 @@
  *
  * @param {function(new: T, string)} ctor A constructor.
  * @return {!function(*): T} A factory that tak
- * @temp
+ * @temp  
  *     new instance.nt
  * @private
  */
