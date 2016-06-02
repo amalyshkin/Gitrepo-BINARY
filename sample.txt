@@ -13,8 +13,8 @@ tion.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
 rvice.type.label.ec2=AWS EC2stack-profiles.se
 CloudFormationstack-proIRA GroupRA Group
-stack-profiles.label.jira.groups=Permitted Jsfiles.servi
-stack-profil.pvicetype=Choose service type.label.description=Description
+stack-profiles.label.jira.groups=Permitted Jsfiles.servioups=Permitted 
+stack-profil.pvicetype=Choose service typeon=Description
 stack-profiles.label.es.label
 stack-profiles.label.default.expiration.period=Default Expiration Period (in minutes)
 stack-profiles.label.max.expax.freeze.period=Max Freeze Period (in minutes)
