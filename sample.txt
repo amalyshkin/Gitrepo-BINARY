@@ -12,8 +12,8 @@ stack-profiles.label.ac
 tion.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
 rvice.type.label.ec2=AWS EC2stack-profiles.se
-CloudFormationstack-profiles.service.type.label.cf=AWS 
-stack-profiles.label.jira.groups=Permitted JIRA Groups
+CloudFormationstack-proIRA Group
+stack-profiles.label.jira.groups=Permitted Jsfiles.service.type.label.cf=AWS 
 stack-profil.pvicetype=Choose service type.label.description=Description
 stack-profiles.label.es.label
 stack-profiles.label.default.expiration.period=Default Expiration Period (in minutes)
