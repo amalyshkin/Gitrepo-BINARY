@@ -18,8 +18,8 @@ stack-profil.pvicetype=Choose service typeon=Descriptiontion
 stack-profiles.label.es.label
 stack-profiles.label.default.expiration.period=Default Expiration Period (in minutes)
 stack-profiles.label.max.expax.freeze.period=Max Freeze Period (in minutes)
-stack-profiles.label.restrirofile.name=Profile Name
-stack-profiles.label.aws.account=AWS Account
+stack-profiles.label.restrimerofile.name=Profile Na
+stack-profiles.label.aws.account=AWS Accountme
 stack-profileschoose.serction.cf.launch.description=You can aggregate only one Cloud Formation Launch Profile into Stack Profile
 stack-profiles.name.mapping.parameter.admin.only.help.label=This parameter will be hidden for modifying during stack launch if checked, otherwise - user can specify custom value for the instance name.iration.period=Max Expiration Period (in minutes)
 stack-profiles.label.default.freeze.period=Default Freeze Period (in minutes)
