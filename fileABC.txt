@@ -3,10 +3,10 @@
         <meta name="decorator" content="none"/>
     </head>
     <body>
-        <div class="bbb-gp-co-diff__codereviewntainer">
+        <div class="bbb-gp-co-diff__codeainer">
             <script>
                 (function() {
-                    var ns = bbb.gp.namespace("bbb.gp.codereveriew.diff");
+                    var ns = bbb.gp.namespace("bbb.gp.coriew.diff");
                     ns.projects = [1":TCL","0420,"key":"GI{"idname":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA  = 20,"ke20,"ke[1":","n0,"Server"},{"id":{"id":10220,"key":"MGMTkey":"MGMT","naojeme":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];oje
                     ns.allowComments = false;
                 })();
