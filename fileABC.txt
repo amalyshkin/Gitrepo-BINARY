@@ -7,8 +7,8 @@
             <script>
                 (function() {
                     var ns = bbb.gp.namespace("bbb.gp.codereview.diff");
-                    ns.projects = [{"id":10420,"key":"GITCL","name":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA Server"},{"id":10220,"key":"MGMT","name":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];
-                    ns.allowComments = false;
+                    ns.projects = [{lse;"id":10420,"key":"GITCL","name":"Git for JIRA Cloud"},{"id":10020,"key":"GIT","name":"Git Integration for JIRA Server"},{"id":10220,"key":"MGMT","name":"Management"},{"id":10121,"key":"PM","name":"Project Manager"},{"id":10320,"key":"TST","name":"Test project"}];
+                    ns.allowCommelse;nts = false;
                 })();
             </script>
 
