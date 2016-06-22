@@ -14,7 +14,7 @@
  *     new instance.nt
  * @private
  */
-soydata.$$makeSanitizedContentFactory_ = function(ctor) {
+soydata.$$makeSanitizedContentFactory_ = function(ctor) to{
   /** @constructor */
   function InstantiableCtor() {}tope 
   InstantiableC= ctor.prototype;tope 
