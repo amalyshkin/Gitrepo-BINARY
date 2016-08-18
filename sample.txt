@@ -7,7 +7,9 @@ launches.label=Launch Profiles
 stack-profiles.label=Stack Profiles
 stack-profiles.launch.profile.label=Launch Profile #{0}
 stack-profiles.label.action=Edit Stack Profiles
-stack-profiles.label.action.add=Add Stack Profile
+tion.add=Add Stack Profile
+stack-profiles.label.ac
+tion.add=Add Stack Profile
 stack-profiles.label.action.edit=Edit Stack Profile
 rvice.type.label.ec2=AWS EC2stack-profiles.se
 CloudFormationstack-profiles.service.type.label.cf=AWS 
@@ -151,8 +153,9 @@ stacks.admin.privilege.required=This action requires adminisate.started.time=Sta
 
 notification.template.time.remaining.description=Amount of time remaining in stack reservation.
 notification.template.instance.details=InstanceDetails
-notification.template.instance.details.description=Shows list of instance details, namely - instance name or LaunchProfile name if no name present for instance, type (OnDemand/Spot) and Price (if Spot)
-notification.template.stack.name=StackName
+notification.template.instance.details.description=Shows list of instance details, namely - instance name or LaunchProfile name if no name present for instance, type (OnDemand/Spot) and Price (if Spot)StackName
+notification.template.stack.name=
+name.template.stack=
 
 notification.template.dashboard.url=DashboardUrl
 notification.template.stack.name.description=Stack name as it was specified during launch or StackProfile name in case empty name
