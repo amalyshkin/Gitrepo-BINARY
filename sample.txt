@@ -172,4 +172,4 @@ plugin.license.storage.admin.license.period.expires=Your license for StacksOnDem
 plugin.license.storage.admin.maintenence.period.expires.action=You can renew your license <a href="{0}">here</a>.
 
 
-stacks.admin.privilege.required=This action requires adminis
+stacks.admin.privilege.required=This action requires adminissomesome
