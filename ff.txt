@@ -288,3 +288,4 @@ soy.$$getMapKeys = function(map) {
 soy.$$getDelTemplateId = function(delTemplateName) {
   return delTemplateName;
 };
+WakeUp
