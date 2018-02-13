@@ -1,5 +1,6 @@
 stacks.ondemand.label=StacksOnDemand
 sod.actions.webpanel.label=StacksOnDemand
+
 sod.actions.not.allowed.webpanel.label=StacksOnDemand
 log.viewer.count=Logged last <b>{0}</b> lines
 log.viewer.label=Log Viewer
