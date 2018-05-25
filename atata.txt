@@ -1,4 +1,5 @@
 AJS.$(function() {
+
     'use strict';
     var ns = bbb.gp.namespace('bbb.gp.codereview.diffExpander');
 
