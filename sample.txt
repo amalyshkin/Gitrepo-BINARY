@@ -1,4 +1,4 @@
-Demo text
+Demo text - sample smart commits
 
 
 stacks.ondemand.label=StacksOnDemand
