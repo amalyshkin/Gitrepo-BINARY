@@ -1,5 +1,5 @@
 
- * Creates a factory for SanitizedContent types.
+ * Creates a factory for SanitizedContent types. and for updating.
  *
  * This is a hack so that the soydata.VERY_UNSAFE.ordainSanitized* can
  * instantiate Sanitized* classes, without making the Sanitized* constructors
