@@ -1,4 +1,4 @@
-stacks.ondemand.label=StacksOnDemand
+stacks.ondemand.label=StacksOnDemand breaking this setting
 sod.actions.webpanel.label=StacksOnDemand
 sod.actions.not.allowed.webpanel.label=StacksOnDemand
 log.viewer.count=Logged last <b>{0}</b> lines
