@@ -4,4 +4,4 @@ case????
 #time
 label again
 #comment 2 3 4
-#<transition-name> ip
+#<transition-name> ip reject
