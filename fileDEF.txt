@@ -8,4 +8,4 @@ label again
 a+av+fv 2
 eggog 2
 email no yes allcaps off
-rep email
+rep email off
