@@ -9,3 +9,4 @@ a+av+fv 2
 eggog 2
 email no yes allcaps off
 rep email off on 1min quick
+last
