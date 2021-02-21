@@ -12,7 +12,7 @@ If yes &mdash; please add corresponding notes in the ticket description: for tes
 If yes &mdash; please add notes for testers about testing these changes in the ticket description.
 - [ ] Have you added any migration or database upgrade routines? \
 If yes &mdash; please add notes for testers about migration testing in the ticket description.
-- [ ] (for features) Have you created a test plan subtask according to [GIT-3900](https://jira.bigbrassband.com/browse/GIT-3900)?
+- [ ] (_for features_) Have you created a test plan subtask according to [GIT-3900](https://jira.bigbrassband.com/browse/GIT-3900)?
 
 ## Error clearance
 - [ ] Have you fixed all Sonar Cloud errors and warnings?
